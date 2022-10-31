@@ -15,3 +15,6 @@ https://documenter.getpostman.com/view/24140736/2s8YRcPGnC
 ## Documentation
 
 https://documenter.getpostman.com/view/24140736/2s8YRiJZAv
+
+![TestApp API](https://github.com/Subasree-Vivekanandan/ExamListAPI/blob/main/static/screenshots/apiview.PNG)
+
