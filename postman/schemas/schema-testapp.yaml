@@ -1,0 +1,850 @@
+openapi: 3.0.0
+info:
+  title: TestApp API
+  description: >-
+    This API is a combination of three collections 1)Examlist 2)Questionlist (ADD,UPDATE,DELETE,VIEW exams & questions) 3)ResultView-VIEW,CLEAR result history
+  version: 1.0.0
+servers:
+  - url: localhost://
+paths:
+  /000/course/:
+    get:
+      tags:
+        - default
+      summary: localhost:8000/course/
+      description: To view list of exams enrolled use GET
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 11:30:18 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '521'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  course_name: Python exam updated
+                  question_number: 10
+                  total_marks: 10
+                - id: 2
+                  course_name: Updated DSA
+                  question_number: 15
+                  total_marks: 15
+                - id: 3
+                  course_name: AI
+                  question_number: 15
+                  total_marks: 15
+                - id: 4
+                  course_name: Operating Systems
+                  question_number: 10
+                  total_marks: 10
+                - id: 6
+                  course_name: CN
+                  question_number: 10
+                  total_marks: 10
+                - id: 8
+                  course_name: OOAD
+                  question_number: 10
+                  total_marks: 10
+                - id: 9
+                  course_name: Java exam updated
+                  question_number: 10
+                  total_marks: 10
+    post:
+      tags:
+        - default
+      summary: localhost:8000/course/
+      description: To add new exam use POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                course_name: Java
+                question_number: 10
+                total_marks: 20
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:36:15 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '68'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 11
+                course_name: Java
+                question_number: 10
+                total_marks: 20
+  /000/detail/9/:
+    put:
+      tags:
+        - default
+      summary: localhost:8000/detail/9/
+      description: To edit existing exam contents use PUT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                course_name: 'Java updated '
+                question_number: 10
+                total_marks: 10
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:38:14 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '80'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 9
+                course_name: Java exam updated
+                question_number: 10
+                total_marks: 10
+  /000/detail/10/:
+    delete:
+      tags:
+        - default
+      summary: localhost:8000/detail/9/
+      description: To remove a exam use DELETE
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:37:30 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '0'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: null
+  /000/generic/course/4/:
+    get:
+      tags:
+        - default
+      summary: localhost:8000/generic/course/4/ Copy
+      description: Use Token authorization to access data
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: '{{key_api}}'
+        - name: api_key
+          in: header
+          schema:
+            type: string
+          example: '{{'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 11:29:00 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '80'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 4
+                course_name: Operating Systems
+                question_number: 10
+                total_marks: 10
+
+  /000/question/:
+    get:
+      tags:
+        - default
+      summary: localhost:8000/question/
+      description: To view your list of questions use GET
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:40:30 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '1269'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 2
+                  marks: 1
+                  question: How are you
+                  option1: fine
+                  option2: not fine
+                  option3: good
+                  option4: bad
+                  answer: Option1
+                  course: 6
+                - id: 3
+                  marks: 1
+                  question: Which Operating system is open source?
+                  option1: Windows
+                  option2: Windows Pro
+                  option3: Linux
+                  option4: Unix
+                  answer: Option3
+                  course: 4
+                - id: 4
+                  marks: 1
+                  question: What boots your OS?
+                  option1: Interrupt
+                  option2: Fork
+                  option3: Hardware
+                  option4: BIOS
+                  answer: Option4
+                  course: 4
+                - id: 5
+                  marks: 1
+                  question: Switching between processes is
+                  option1: Memory mapping
+                  option2: Context switch
+                  option3: Segmentation
+                  option4: Paging
+                  answer: Option2
+                  course: 4
+                - id: 6
+                  marks: 1
+                  question: Mutex is called
+                  option1: Memory mapping
+                  option2: Memory exclusion
+                  option3: Mutual exclusion
+                  option4: Memory swapping
+                  answer: Option3
+                  course: 4
+                - id: 7
+                  marks: 1
+                  question: Mutex is called
+                  option1: Memory mapping
+                  option2: Memory exclusion
+                  option3: Mutual exclusion
+                  option4: Memory swapping
+                  answer: Option3
+                  course: 4
+                - id: 8
+                  marks: 2
+                  question: Wastage of memory inside segment is called
+                  option1: Paging
+                  option2: Fragmentation
+                  option3: Segementation
+                  option4: Internal fragmentation
+                  answer: Option4
+                  course: 4
+    post:
+      tags:
+        - default
+      summary: localhost:8000/question/
+      description: To add a question use POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                marks: 1
+                question: Mutex is called
+                option1: Memory mapping
+                option2: Memory exclusion
+                option3: Mutual exclusion
+                option4: Memory swapping
+                answer: Option3
+                course: 4
+      responses:
+        '201':
+          description: Created
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 09:33:16 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, POST, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '190'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 6
+                marks: 1
+                question: Mutex is called
+                option1: Memory mapping
+                option2: Memory exclusion
+                option3: Mutual exclusion
+                option4: Memory swapping
+                answer: Option3
+                course: 4
+  /000/qdetail/2/:
+    get:
+      tags:
+        - default
+      summary: localhost:8000/qdetail/2/
+      description: To view a particular question use GET
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:39:13 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '144'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 2
+                marks: 1
+                question: How are you
+                option1: fine
+                option2: not fine
+                option3: good
+                option4: bad
+                answer: Option1
+                course: 6
+  /000/qdetail/1/:
+    put:
+      tags:
+        - default
+      summary: localhost:8000/qdetail/1
+      description: To edit a particular question use PUT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 1
+                marks: 1
+                question: Syntax of tuple
+                option1: ("suba","shobi")
+                option2: '[1,3]'
+                option3: '[193,4]'
+                option4: '[2,7]'
+                answer: Option2
+                course: 1
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:42:55 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '158'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 4
+                marks: 1
+                question: What boots your OS?
+                option1: Interrupt
+                option2: Fork
+                option3: Hardware
+                option4: BIOS
+                answer: Option4
+                course: 4
+    delete:
+      tags:
+        - default
+      summary: localhost:8000/qdetail/1/
+      description: To remove a question use DELETE
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Oct 2022 10:41:29 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, PUT, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '0'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: null
+              
+
+  /000/result/:
+    get:
+      tags:
+        - default
+      summary: localhost:8000/result/
+      description: To view the result use GET
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 31 Oct 2022 20:40:05 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '79'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 4
+                  marks: 5
+                  date: '2022-10-31T20:32:20.323095Z'
+                  student: 1
+                  exam: 13
+    delete:
+      tags:
+        - default
+      summary: localhost:8000/result/
+      description: To delete the result use DELETE
+      responses:
+        '204':
+          description: No Content
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Mon, 31 Oct 2022 20:44:42 GMT
+            Server:
+              schema:
+                type: number
+                example: WSGIServer/0.2 CPython/3.10.0
+            Vary:
+              schema:
+                type: string
+                example: Accept, Cookie
+            Allow:
+              schema:
+                type: string
+                example: GET, DELETE, HEAD, OPTIONS
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Length:
+              schema:
+                type: integer
+                example: '0'
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Referrer-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: null
+

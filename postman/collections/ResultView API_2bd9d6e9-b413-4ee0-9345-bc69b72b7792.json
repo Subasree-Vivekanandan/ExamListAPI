@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "dae65b13-7d66-46e3-9a69-c2b8f51b3249",
+		"name": "ResultView API",
+		"description": "This ResultView API is used to view and delete the exam results",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/result/",
+			"id": "4183acaa-b6a4-474d-be67-c937491d124b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/result/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"result",
+						""
+					]
+				},
+				"description": "To view the result use GET"
+			},
+			"response": [
+				{
+					"id": "720bd4e0-29ca-47db-bbaa-4e651619dad2",
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/result/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"result",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 31 Oct 2022 20:40:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n        \"id\": 4,\n        \"marks\": 5,\n        \"date\": \"2022-10-31T20:32:20.323095Z\",\n        \"student\": 1,\n        \"exam\": 13\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/result/",
+			"id": "4473440b-1db5-46bb-b687-3dffa6337e4d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/result/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"result",
+						""
+					]
+				},
+				"description": "To delete the result use DELETE"
+			},
+			"response": [
+				{
+					"id": "95572cb8-2c35-4377-a41d-11ef2e9acf51",
+					"name": "localhost:8000/result/",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/result/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"result",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 31 Oct 2022 20:44:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		}
+	]
+}

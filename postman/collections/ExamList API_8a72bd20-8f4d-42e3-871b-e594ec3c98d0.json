@@ -1,0 +1,660 @@
+{
+	"info": {
+		"_postman_id": "5a8c5b00-7501-43f2-853b-5dc1772e0159",
+		"name": "ExamList API",
+		"description": "This collection of API requests allow you to ADD,UPDATE,DELETE,VIEW exams created in in your test application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/course/",
+			"id": "192118be-c0a0-4d4c-888c-56b77cc4312b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/course/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					]
+				},
+				"description": "To view list of exams enrolled use GET"
+			},
+			"response": [
+				{
+					"id": "0425ae9b-1d62-495b-ab7f-66007820a1f9",
+					"name": "localhost:8000/course/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/course/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 11:30:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "521"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n        \"id\": 1,\n        \"course_name\": \"Python exam updated\",\n        \"question_number\": 10,\n        \"total_marks\": 10\n    },\n    {\n        \"id\": 2,\n        \"course_name\": \"Updated DSA\",\n        \"question_number\": 15,\n        \"total_marks\": 15\n    },\n    {\n        \"id\": 3,\n        \"course_name\": \"AI\",\n        \"question_number\": 15,\n        \"total_marks\": 15\n    },\n    {\n        \"id\": 4,\n        \"course_name\": \"Operating Systems\",\n        \"question_number\": 10,\n        \"total_marks\": 10\n    },\n    {\n        \"id\": 6,\n        \"course_name\": \"CN\",\n        \"question_number\": 10,\n        \"total_marks\": 10\n    },\n    {\n        \"id\": 8,\n        \"course_name\": \"OOAD\",\n        \"question_number\": 10,\n        \"total_marks\": 10\n    },\n    {\n        \"id\": 9,\n        \"course_name\": \"Java exam updated\",\n        \"question_number\": 10,\n        \"total_marks\": 10\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/course/",
+			"id": "383905ac-f3e1-46fe-8029-63f7f99ce8ff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"course_name\": \"Java\",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 20\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/course/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						""
+					]
+				},
+				"description": "To add new exam use POST"
+			},
+			"response": [
+				{
+					"id": "346a25fa-b362-4563-aa85-270273104ed3",
+					"name": "localhost:8000/course/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"course_name\": \"Java\",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 20\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/course/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"course",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 10:36:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": 11,\n    \"course_name\": \"Java\",\n    \"question_number\": 10,\n    \"total_marks\": 20\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/detail/9/",
+			"id": "d885e5ed-1cc5-4ad8-8eda-8dbde5f7d737",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"course_name\": \"Java updated \",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/detail/9/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"detail",
+						"9",
+						""
+					]
+				},
+				"description": "To edit existing exam contents use PUT"
+			},
+			"response": [
+				{
+					"id": "28c72758-b6be-4b72-b452-0c0bdd4be3ac",
+					"name": "localhost:8000/detail/9/",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"course_name\": \"Java exam updated \",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/detail/9/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"detail",
+								"9",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 10:38:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": 9,\n    \"course_name\": \"Java exam updated\",\n    \"question_number\": 10,\n    \"total_marks\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/detail/9/",
+			"id": "2aaa854d-0eb9-47c5-bebd-a2666b76da09",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"course_name\": \"Java Course updated \",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/detail/10/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"detail",
+						"10",
+						""
+					]
+				},
+				"description": "To remove a exam use DELETE"
+			},
+			"response": [
+				{
+					"id": "04f204ff-88a4-4647-ba0b-172f8a081f72",
+					"name": "localhost:8000/detail/9/",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"course_name\": \"Java Course updated \",\r\n        \"question_number\": 10,\r\n        \"total_marks\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/detail/11/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"detail",
+								"11",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 10:37:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/generic/course/4/ Copy",
+			"id": "aa0a718b-818a-4fab-9ddd-2b327b391c21",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{key_api}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/generic/course/4/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"generic",
+						"course",
+						"4",
+						""
+					]
+				},
+				"description": "Added authorization, Using authorization restrict the retrieval of data among certain class of users"
+			},
+			"response": [
+				{
+					"id": "bbc25851-e759-4c3d-8563-2ecda4fc6f42",
+					"name": "localhost:8000/generic/course/4/ Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{key_api}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/generic/course/4/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"generic",
+								"course",
+								"4",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 11:28:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": 4,\n    \"course_name\": \"Operating Systems\",\n    \"question_number\": 10,\n    \"total_marks\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/generic/course/4/ Copy",
+			"id": "24b234dd-3729-4ce0-a5d2-f5a5947e0181",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{key_api}}",
+						"type": "text"
+					},
+					{
+						"key": "api_key",
+						"value": "{{",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/generic/course/4/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"generic",
+						"course",
+						"4",
+						""
+					]
+				},
+				"description": "Use Token authorization to access data"
+			},
+			"response": [
+				{
+					"id": "a62fb236-98cf-4c57-9a98-cb52dae1ffc9",
+					"name": "localhost:8000/generic/course/4/ Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{key_api}}",
+								"type": "text"
+							},
+							{
+								"key": "api_key",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/generic/course/4/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"generic",
+								"course",
+								"4",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Oct 2022 11:29:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": 4,\n    \"course_name\": \"Operating Systems\",\n    \"question_number\": 10,\n    \"total_marks\": 10\n}"
+				}
+			]
+		}
+	]
+}
